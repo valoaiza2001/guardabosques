@@ -845,6 +845,7 @@ export default function App() {
   const handleLogin = (user: string) => {
     setLoggedIn(true);
     setUsername(user);
+    console.log("Usuario:", username);
     setRole("ciudadano"); // rol por defecto; se edita en Perfil
     setTab(defaultTabFor("ciudadano"));
   };
