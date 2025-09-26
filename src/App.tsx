@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { MapPin, Flame, Bell, ShieldPlus, BookOpen, Users, Camera, Upload, MessageCircle, Send, Home, BarChart3, AlertTriangle, Compass, Leaf, Trophy, ChevronRight, Play, Search, User, Phone, Route, Copy, Moon, Sun, Settings, HandHeart, PlayCircle, FileDown } from "lucide-react";
+import { MapPin, Flame, Bell, ShieldPlus, BookOpen, Users, Camera, Upload, MessageCircle, Send, Home, BarChart3, AlertTriangle, Compass, Leaf, Trophy, ChevronRight, Play, User, Phone, Route, Copy, Moon, Sun, Settings, HandHeart, PlayCircle, FileDown } from "lucide-react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Area, AreaChart } from "recharts";
 
 /**
