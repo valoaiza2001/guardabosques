@@ -114,7 +114,7 @@ function MapCard() {
       {/* pseudo-mapa */}
       <div className="relative w-full h-48 rounded-2xl bg-[conic-gradient(at_top_left,_#d6f0de,_#ffffff)] overflow-hidden">
         {[{ x: '20%', y: '25%', c: danger }, { x: '60%', y: '40%', c: amber }, { x: '75%', y: '70%', c: primary }].map((m, i) => (
-          <div key={i} className="absolute -translate-x-1/2 -translate-y-1/2">
+          <div key={i} className="absolute -translate-x-1/2 -translate-y-1/2 rounded-full p-3 animate-pulse" style={{ left: m.x, top: m.y }}>
             <div className="w-6 h-6 rounded-full border-2 border-white shadow" style={{ background: m.c, left: m.x, top: m.y, position: 'absolute' }} />
           </div>
         ))}
@@ -169,7 +169,7 @@ function MiniStats() {
 function HomeScreen({ role, onOpenAlert, dark, onToggleTheme }: { role: Role; onOpenAlert: (a: AlertItem) => void; dark: boolean; onToggleTheme: () => void }) {
   return (
     <div className="px-5 pb-28">
-      <TopBar title="Guardabosques" dark={dark} onToggleTheme={onToggleTheme} right={<div className="text-[11px] px-2 py-1 rounded-full border chip">{role}</div>} />
+      <TopBar title="Guardianes" dark={dark} onToggleTheme={onToggleTheme} right={<div className="text-[11px] px-2 py-1 rounded-full border chip">{role}</div>} />
       <div className="px-1 pt-2">
         <MapCard />
         <MiniStats />
@@ -815,7 +815,7 @@ function LoginScreen({ onLogin }: { onLogin: (username: string) => void }) {
       <div className="flex-1 px-6 pt-20">
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 text-sm px-3 py-1 rounded-full border chip">
-            <Compass size={14} /> Guardabosques
+            <Compass size={14} /> Guardadianes del fuego
           </div>
           <h1 className="text-2xl font-semibold mt-4 text-main">Bienvenida</h1>
           <p className="text-sub text-sm mt-1">Inicia sesión para continuar</p>
@@ -908,7 +908,7 @@ export default function App() {
         </nav>
       </div>
       {/* App brand chip */}
-      <div className="absolute top-8 left-5 text-xs px-2 py-1 rounded-full border chip">Guardabosques</div>
+      <div className="absolute top-8 left-5 text-xs px-2 py-1 rounded-full border chip">Guardianes del fuego</div>
       {/* Overlays */}
       {overlay?.type === "alert" && (
         <Overlay onClose={() => setOverlay(null)}>
